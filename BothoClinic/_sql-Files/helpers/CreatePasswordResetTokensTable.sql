@@ -1,0 +1,12 @@
+USE BothoClinicDB;
+GO
+
+CREATE TABLE PasswordResetTokens (
+    TokenID INT PRIMARY KEY IDENTITY(1,1),
+    UserID INT NOT NULL,
+    Token VARCHAR(100) NOT NULL,
+    ExpiryDateTime DATETIME NOT NULL,
+    IsUsed BIT DEFAULT 0,
+    FOREIGN KEY (UserID) REFERENCES Users(UserID)
+);
+GO
