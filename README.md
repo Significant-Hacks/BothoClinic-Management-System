@@ -34,10 +34,10 @@ A comprehensive **Clinic Management System** built for Botho University's campus
 ### Setup
 ```bash
 git clone https://github.com/Significant-Hacks/BothoClinic-Management-System.git
-cd BothoClinic
+cd BothoClinic-Management-System
 ```
 
-1. Open `BothoClinic.sln` in Visual Studio 2022+
+1. Open `BothoClinic/BothoClinic.sln` in Visual Studio 2022+
 2. Restore NuGet packages (right-click solution → Restore NuGet Packages)
 3. Run `_sql-Files/BothoClinicDB_setupScript.sql` against `(LocalDB)\MSSQLLocalDB` to create the database
 4. Set `BothoClinic` as startup project
