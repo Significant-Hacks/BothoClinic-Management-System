@@ -185,23 +185,6 @@ Audit Logs     Prescriptions  Profile
 Charts/ KPIs   Medical History
 ```
 
----
-
-## Design Patterns Used
-
-| Pattern | Where | How |
-|---------|-------|-----|
-| **MDI (Multiple Document Interface)** | `frmMainMDI` | Single parent form hosting role-specific dashboards as child forms |
-| **Controller** | `Controllers/` | Business logic in dedicated classes (Appointment, Consultation) separated from UI |
-| **Singleton** | `UserSession` | Static `CurrentUser` with thread-safe property access, login/logout audit |
-| **Active Record** | `DatabaseHelper` | Generic ADO.NET wrapper with parameterized SQL, DataTable mapping |
-| **Observer / Audit** | `DatabaseHelper.ExecuteNonQuery()` | Automatic before/after value capture + audit log insertion on all writes |
-| **Strategy** | `SecurityHelper` | PBKDF2-SHA512 algorithm with configurable iterations encapsulated in static methods |
-| **Value Object** | `Models/` | Simple POCO classes with auto-properties for data transfer |
-| **Template Method** | WinForms lifecycle | Override `Form_Load`, wire events via `+=` pattern throughout |
-
----
-
 ## Potential Architectural Issues
 
 ### Critical
